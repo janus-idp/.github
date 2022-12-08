@@ -18,16 +18,20 @@ orgs:
     location: ""
     members:
       - cmoulliard
+      - invinciblejai
       - jayfray12
       - lstewart74
       - malacourse
       - mattheh
+      - mimotej
       - oladapooloyede
       - PatAKnight
+      - raffaelespazzoli
       - rtaniwa
       - SamoKopecky
       - schultzp2020
       - spadgett
+      - traceherrell
     members_can_create_repositories: true
     name: Janus-IDP
     repos:
