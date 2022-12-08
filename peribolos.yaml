@@ -1,0 +1,90 @@
+orgs:
+  janus-idp:
+    admins:
+      - christophe-f
+      - davgordo
+      - gorkem
+      - marshallpowell
+      - sabre1041
+      - serenamarie125
+      - tumido
+    billing_email: gercan@redhat.com
+    company: ""
+    default_repository_permission: read
+    description: 'A Red Hat sponsored community for building Internal Development Platforms and Plugins with backstage.io '
+    email: ""
+    has_organization_projects: true
+    has_repository_projects: true
+    location: ""
+    members:
+      - cmoulliard
+      - jayfray12
+      - lstewart74
+      - malacourse
+      - mattheh
+      - oladapooloyede
+      - PatAKnight
+      - rtaniwa
+      - SamoKopecky
+      - schultzp2020
+      - spadgett
+    members_can_create_repositories: true
+    name: Janus-IDP
+    repos:
+      .github:
+        default_branch: main
+        has_projects: true
+      assemble-architectural-decision-log:
+        default_branch: main
+        has_projects: true
+      assemble-backstage:
+        default_branch: main
+        description: assemble build of backstage
+        has_projects: true
+      assemble-local-dev:
+        default_branch: main
+        has_projects: true
+      assemble-platforms:
+        default_branch: main
+        has_projects: true
+      backstage-plugins:
+        default_branch: main
+        has_projects: false
+        has_wiki: false
+      book:
+        default_branch: main
+        description: Architecture documents
+        has_projects: true
+      helm-backstage:
+        default_branch: main
+        description: Helm Chart for Deploying Backstage
+        has_projects: true
+      redhat-backstage-build:
+        default_branch: main
+        has_projects: true
+      software-templates:
+        default_branch: main
+        description: Assemble Software Template (Backstage)
+        has_projects: true
+    teams:
+      assemble:
+        description: Assemble Project Dev Team
+        maintainers:
+          - sabre1041
+          - christophe-f
+          - marshallpowell
+          - davgordo
+        members:
+          - mattheh
+          - lstewart74
+          - malacourse
+          - oladapooloyede
+          - jayfray12
+        privacy: closed
+        repos:
+          assemble-architectural-decision-log: write
+          assemble-backstage: write
+          assemble-local-dev: write
+          assemble-platforms: write
+          book: write
+          software-templates: write
