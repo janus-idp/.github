@@ -19,7 +19,9 @@ orgs:
     members:
       - cmoulliard
       - invinciblejai
+      - Jaland
       - jayfray12
+      - jland-redhat
       - lstewart74
       - malacourse
       - mattheh
@@ -32,6 +34,7 @@ orgs:
       - schultzp2020
       - spadgett
       - traceherrell
+      - trevorbox
     members_can_create_repositories: true
     name: Janus-IDP
     repos:
@@ -83,7 +86,10 @@ orgs:
           - lstewart74
           - malacourse
           - oladapooloyede
+          - Jaland
           - jayfray12
+          - jland-redhat
+          - trevorbox
         privacy: closed
         repos:
           assemble-architectural-decision-log: write
