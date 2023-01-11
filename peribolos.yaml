@@ -70,6 +70,10 @@ orgs:
         default_branch: main
         description: Assemble Software Template (Backstage)
         has_projects: true
+      webterminal-proxy:
+        default_branch: main
+        description: Proxy for web terminal plugin
+        has_projects: false
     teams:
       assemble:
         description: Assemble Project Dev Team
