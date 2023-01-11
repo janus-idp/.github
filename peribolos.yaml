@@ -18,12 +18,17 @@ orgs:
     location: ""
     members:
       - cmoulliard
+      - divyanshiGupta
       - invinciblejai
+      - Jaland
+      - jasperchui
       - jayfray12
+      - jland-redhat
       - lstewart74
       - malacourse
       - mattheh
       - mimotej
+      - nimishamukherjee
       - oladapooloyede
       - PatAKnight
       - raffaelespazzoli
@@ -32,6 +37,7 @@ orgs:
       - schultzp2020
       - spadgett
       - traceherrell
+      - trevorbox
     members_can_create_repositories: true
     name: Janus-IDP
     repos:
@@ -63,6 +69,9 @@ orgs:
         default_branch: main
         description: Helm Chart for Deploying Backstage
         has_projects: true
+      janus-idp.io:
+        default_branch: main
+        has_projects: true
       redhat-backstage-build:
         default_branch: main
         has_projects: true
@@ -83,7 +92,10 @@ orgs:
           - lstewart74
           - malacourse
           - oladapooloyede
+          - Jaland
           - jayfray12
+          - jland-redhat
+          - trevorbox
         privacy: closed
         repos:
           assemble-architectural-decision-log: write
