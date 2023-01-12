@@ -69,7 +69,7 @@ orgs:
         default_branch: main
         description: Helm Chart for Deploying Backstage
         has_projects: true
-      janus-idp.io:
+      janus-idp.github.io:
         default_branch: main
         has_projects: true
       redhat-backstage-build:
