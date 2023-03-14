@@ -1,0 +1,57 @@
+name: build-and-push
+description: Build and/or push an image to a repository with a given platform
+
+inputs:
+  platform:
+    description: Platform to build with, e.g. linux/amd64
+    required: true
+  image_tag:
+    description: Image tag to tag image with, e.g. latest
+    required: true
+  context:
+    description: Context to build the image with
+    required: false
+    default: .
+  push:
+    description: Whether to push to a registry or not
+    default: "true"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Job Variables
+      shell: bash
+      id: set-build-variables
+      run: |
+        echo "PLATFORM_DASH=$(echo ${{ inputs.platform }} | sed -e 's/\//-/g')" >> $GITHUB_OUTPUT
+        if [ -z "$MAIN_REGISTRY" ] && [ -z "$MAIN_REPOSITORY" ]; then
+          echo "MAIN_REGISTRY=foo" >> $GITHUB_ENV
+          echo "MAIN_REPOSITORY=bar" >> $GITHUB_ENV
+        fi
+
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@e81a89b1732b9c48d79cd809d8d81d79c4647a18 #pin@v2.1.0
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@8c0edbc76e98fa90f69d9a2c020dcb50019dc325 #pin@v2.2.1
+
+    - if: inputs.push == 'true'
+      name: Log in to Registry
+      uses: redhat-actions/podman-login@632d91dfe19e1b55833cb708786bfbad2c2a0335 #pin@v3.2.0
+      with:
+        registry: ${{ env.MAIN_REGISTRY }}
+        username: ${{ env.MAIN_USERNAME }}
+        password: ${{ env.MAIN_PASSWORD }}
+
+    - name: Build container image
+      uses: docker/build-push-action@37abcedcc1da61a57767b7588cb9d03eb57e28b3 #pin@v3.3.0
+      with:
+        context: ${{ inputs.context }}
+        file: Dockerfile
+        platforms: ${{ inputs.platform }}
+        provenance: false
+        push: ${{ inputs.push }}
+        tags: |
+          ${{ env.MAIN_REGISTRY }}/${{ env.MAIN_REPOSITORY }}:latest-${{ steps.set-build-variables.outputs.PLATFORM_DASH }}
+          ${{ env.MAIN_REGISTRY }}/${{ env.MAIN_REPOSITORY }}:${{ inputs.image_tag }}-${{ steps.set-build-variables.outputs.PLATFORM_DASH }}
