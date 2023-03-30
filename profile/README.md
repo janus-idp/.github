@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://avatars.githubusercontent.com/u/117844786?s=200&v=4" width="160" alt="Janus IDP's logo, a two-faced god as curly brackets" />
+    <img src="https://avatars.githubusercontent.com/u/117844786?s=200&v=4" width="80" alt="Janus IDP's logo, a two-faced god as curly brackets" />
 </p>
 <h2 align="center">Janus IDP</h2>
 <p align="center">A Red Hat sponsored community for building Internal Development Platforms and Plugins with backstage.io</p>
