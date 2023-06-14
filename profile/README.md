@@ -13,3 +13,9 @@
   <img alt="Apache license" src="https://img.shields.io/github/license/janus-idp/backstage-plugins">
 </p>
 
+---
+
+### Important links
+
+- [Code of Conduct](https://github.com/janus-idp/.github/blob/main/CODE_OF_CONDUCT.md)
+- [Governance](https://github.com/janus-idp/.github/blob/main/GOVERNANCE.md)
