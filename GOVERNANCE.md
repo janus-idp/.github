@@ -128,7 +128,7 @@ The maintainers group for golden path templates stored in the [janus-idp/softwar
 
 ### Demo
 
-The `@janus-idp/maintainers-helm` GitHub team maintains the [janus-idp/demo-setup][]. This team has a write accesss to the that repository. This team is the default `CODEOWNER` for this repository.
+The `@janus-idp/maintainers-demo` GitHub team maintains the [janus-idp/demo-setup][]. This team has a write accesss to the that repository. This team is the default `CODEOWNER` for this repository.
 
 ### Community website
 
