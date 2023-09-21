@@ -1,0 +1,26 @@
+name: Add issue to project
+
+on:
+  workflow_call:
+    inputs:
+      project_id:
+        type: number
+        required: true
+jobs:
+  add-issue-to-project:
+    name: Add issue with `status/triage` label to project
+    runs-on: ubuntu-latest
+    if: ${{ github.event.label.name == 'status/triage' }}
+    steps:
+      - name: Generate token
+        id: generate-token
+        uses: actions/create-github-app-token@v1.2.1
+        with:
+          # Organization Github App ID and Private Key with write permissions to organization project
+          app_id: ${{ vars.APP_ID }}
+          private_key: ${{ secrets.APP_PRIVATE_KEY }}
+      - name: Add issue to project
+        run: gh project item-add ${{ inputs.project_id }} --owner ${{ github.event.organization.login }} --url ${{ github.event.issue.html_url }}
+        env:
+          # token needs to have read/write permissions for projects on org level
+          GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
