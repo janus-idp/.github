@@ -6,7 +6,7 @@ on:
       project_id:
         type: number
         description: The ID of the project to add the issue to
-        default: 1
+        default: 2
 jobs:
   add-issue-to-project:
     name: Add issue with `status/triage` label to project
