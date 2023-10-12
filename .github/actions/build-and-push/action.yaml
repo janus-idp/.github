@@ -45,7 +45,7 @@ runs:
         password: ${{ env.MAIN_PASSWORD }}
 
     - name: Build container image
-      uses: docker/build-push-action@f9efed53cc1b0364ba947400ac02042bbbaac7fc #pin@v3.3.0
+      uses: docker/build-push-action@8d2cf95286e3dd3d016d478187b93b57af29fd2d #pin@v3.3.0
       with:
         context: ${{ inputs.context }}
         file: Dockerfile
