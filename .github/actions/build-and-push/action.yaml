@@ -34,7 +34,7 @@ runs:
       uses: docker/setup-qemu-action@326560df218a7ea9cf6ab49bbc88b8b306bb437e #pin@v2.1.0
 
     - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@5d9862498505fcac67b9f455d6e94ec0339f7b90 #pin@v2.2.1
+      uses: docker/setup-buildx-action@edfb0fe6204400c56fbfd3feba3fe9ad1adfa345 #pin@v2.2.1
 
     - if: inputs.push == 'true'
       name: Log in to Registry
