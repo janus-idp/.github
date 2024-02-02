@@ -120,9 +120,6 @@ The `@janus-idp/maintainers-showcase` GitHub team maintains the [janus-idp/backs
 
 ### Helm
 
-
-https://github.com/orgs/redhat-developer/teams/rhdh-helm
-
 The `@redhat-developer/rhdh-helm` GitHub team has write access to, and maintains, the https://github.com/redhat-developer/rhdh-chart repo. This team is the default `CODEOWNER` for this repository.
 
 ### GPTs
