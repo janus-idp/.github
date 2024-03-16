@@ -25,7 +25,7 @@ runs:
   using: "composite"
   steps:
     - name: Log in to Registry to pull images
-      uses: redhat-actions/podman-login@a7d8d3e6447c1d7ea679172c7d10c7723d49dbf4 #pin@v3.2.0
+      uses: redhat-actions/podman-login@4934294ad0449894bcd1e9f191899d7292469603 #pin@v3.2.0
       with:
         registry: ${{ env.MAIN_REGISTRY }}
         username: ${{ env.MAIN_USERNAME }}
@@ -47,7 +47,7 @@ runs:
         podman logout ${{ env.MAIN_REGISTRY }}
 
     - name: Log in to Registry to push images
-      uses: redhat-actions/podman-login@a7d8d3e6447c1d7ea679172c7d10c7723d49dbf4 #pin@v3.2.0
+      uses: redhat-actions/podman-login@4934294ad0449894bcd1e9f191899d7292469603 #pin@v3.2.0
       with:
         registry: ${{ inputs.registry }}
         username: ${{ inputs.username }}
